@@ -1,0 +1,149 @@
+body {
+  background-color: #1B1E29;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+}
+
+aside {
+  background-color: #232633;
+  padding: 20px;
+  width: 335px;
+}
+
+.output {
+  display: flex;
+  /* flex-direction: column; */
+}
+
+.output div {
+  width: calc(50% - 10px);
+  display: flex;
+  flex-direction: column;
+}
+
+.output div:last-child {
+  margin-left: 20px;
+}
+
+main {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 1090px;
+}
+
+main > div {
+  width: 1160px;
+  height: 175px;
+  /* background-color: darkgray; */
+  background-color: transparent;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+main > div > article {
+  overflow: hidden;
+  min-height: 175px;
+  min-width: 125px;
+  background-color: purple;
+  margin: 0 10px;
+  background-image: url(https://media.discordapp.net/attachments/741268256450543618/978764783845249024/plateau1.2.png);
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+input {
+  background-color: #292D3D;
+  border: none;
+  font-size: 20px;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 10px;
+}
+
+button {
+  background-color: #292D3D;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 15px;
+  font-size: 15px;
+  padding: 5px 10px;
+}
+
+button:hover {
+  background-color: #64697B;
+}
+
+.add {
+  display: flex;
+}
+
+.output input {
+  margin-top: 0;
+  font-size: 15px;
+}
+
+.output p {
+  margin: 15px 0 5px 0;
+}
+
+aside > * {
+  width: 100%;
+  margin: 0;
+  margin-top: 35px;
+}
+
+#board {
+  margin: 0;
+  padding: 0;
+  margin-top: 35px;
+}
+
+#board li {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+#board label {
+  margin-left: 15px;
+  margin-right: auto;
+}
+
+aside > button {
+  padding: 10px;
+}
+
+main div article {
+  box-shadow: 0 -50px 69px -23px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 -10px 81px -14px rgba(0, 0, 0, 0.75)
+}
+
+main div:nth-child(1) {
+  transform: scale(0.90);
+}
+
+main div:nth-child(2) {
+  transform: scale(0.95);
+}
+
+main article {
+  transform-origin: bottom;
+  transform: perspective(50rem) rotateX(0deg);
+  transition: transform 0.25s ease-in;
+}
+
+main article:hover {
+  transform: perspective(50rem) rotateX(-10deg);
+}
+main article.off {
+transform: perspective(20rem) rotateX(80deg);
+}
